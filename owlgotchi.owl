@@ -1,15 +1,17 @@
 widget "owlgotchi" {
-  meta { owl: 5; description: "A pixel owl Tamagotchi: feed, play, clean, bathe and cure it. Earn coins, xp and badges; buy treats, outfits, homes, toys and decor, and hatch animal friends to keep it company"; version: "4.2"; license: "MIT"; category: "fun" }
+  meta { owl: 5; description: "A pixel owl virtual pet: feed, play, clean, bathe and cure it. Earn coins, xp and badges; buy treats, outfits, homes, toys and decor, and hatch animal friends to keep it company"; version: "4.2"; license: "MIT"; category: "fun" }
   page: 2
   order: 1
   size: 3x3
   minSize: 2x2
   padding: 6
 
-  // Owlgotchi: a fork of "owl" by Simon Schubert (MIT), from the widget store
+  // Owlgotchi: a fork of "owl" by Simon Schubert, from the widget store
   // (github.com/SimonSchubert/omarchy-widgets, widgets/simonschubert/owl).
+  // Copyright (c) 2026 Simon Schubert and contributors; changes (c) 2026 dimasmds.
+  // MIT License: https://github.com/SimonSchubert/omarchy-widgets/blob/main/LICENSE
 
-  // A Tamagotchi in theme colors. Hunger and happiness are four hearts each that
+  // A virtual pet in theme colors. Hunger and happiness are four hearts each that
   // drain while it's awake (6 to 21): a heart every 2 h. Poop piles up every 3 h
   // awake. Hygiene is four drops that drain a drop every 3 h awake, and faster with
   // poop about; a bath fills them. Three piles, a filthy owl with poop about, or an empty belly and heart
