@@ -1,4 +1,4 @@
-widget "owlgotchi" {
+widget "hootling" {
   meta { owl: 5; description: "A pixel owl virtual pet: feed, play, clean, bathe and cure it. Earn coins, xp and badges; buy treats, outfits, homes, toys and decor, and hatch animal friends to keep it company"; version: "4.2"; license: "MIT"; category: "fun" }
   page: 2
   order: 1
@@ -6,7 +6,7 @@ widget "owlgotchi" {
   minSize: 2x2
   padding: 6
 
-  // Owlgotchi: a fork of "owl" by Simon Schubert, from the widget store
+  // Hootling: a fork of "owl" by Simon Schubert, from the widget store
   // (github.com/SimonSchubert/omarchy-widgets, widgets/simonschubert/owl).
   // Copyright (c) 2026 Simon Schubert and contributors; changes (c) 2026 dimasmds.
   // MIT License: https://github.com/SimonSchubert/omarchy-widgets/blob/main/LICENSE
@@ -227,16 +227,16 @@ widget "owlgotchi" {
   // Owls from before hygiene start out clean.
   when hatched && washAt == 0 { wash = 4; washAt = now }
   // Care: running a meter empty counts once, and neglect makes it sick.
-  when hatched && foodAt > 0 && foodH == 0 && !foodMiss { mistakes = mistakes + 1; foodMiss = true; notify("owlgotchi", "Your owl is starving. Feed it!") }
+  when hatched && foodAt > 0 && foodH == 0 && !foodMiss { mistakes = mistakes + 1; foodMiss = true; notify("hootling", "Your owl is starving. Feed it!") }
   when hatched && joyAt > 0 && joyH == 0 && !joyMiss { mistakes = mistakes + 1; joyMiss = true }
-  when hatched && washAt > 0 && washH == 0 && !washMiss { mistakes = mistakes + 1; washMiss = true; notify("owlgotchi", "Your owl is filthy. Give it a bath!") }
-  when hatched && foodAt > 0 && !asleep && !sick && (poops >= 3 || poops >= 1 && washH == 0 || foodH == 0 && joyH == 0) { sick = true; notify("owlgotchi", "Your owl is sick. It needs medicine.") }
+  when hatched && washAt > 0 && washH == 0 && !washMiss { mistakes = mistakes + 1; washMiss = true; notify("hootling", "Your owl is filthy. Give it a bath!") }
+  when hatched && foodAt > 0 && !asleep && !sick && (poops >= 3 || poops >= 1 && washH == 0 || foodH == 0 && joyH == 0) { sick = true; notify("hootling", "Your owl is sick. It needs medicine.") }
   when !asleep { lightsOff = false }
   // A friend's egg hatches.
   at nextHatch {
     toast = "an egg hatched! say hi"
     toastNow = now
-    notify("owlgotchi", "A friend's egg hatched! Come say hi.")
+    notify("hootling", "A friend's egg hatched! Come say hi.")
   }
 
   // The daily visit: the first time it's awake each day pays a bonus that grows
@@ -1367,7 +1367,7 @@ widget "owlgotchi" {
   }
 
   screen {
-    title: "owlgotchi"
+    title: "hootling"
     Column {
       scroll: true
       gap: 12
